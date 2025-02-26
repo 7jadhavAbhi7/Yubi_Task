@@ -6,6 +6,9 @@ This project enables lip synchronization of a static image with an audio file us
 
 ## Features
 
+- Converts text scripts into speech using ElevenLabs TTS.
+- Generates lip-synced videos from an input image and audio file.
+
 - Generates lip-synced videos from an input image and audio file.
 - Supports head movements and facial expressions.
 - Easy-to-use command-line interface.
@@ -37,6 +40,21 @@ This project enables lip synchronization of a static image with an audio file us
 
 ## Usage
 
+### Text-to-Speech Conversion
+Use ElevenLabs' TTS service to convert a text script into an audio file directly from their website:
+
+1. Visit [ElevenLabs](https://elevenlabs.io/).
+2. Sign in or create an account.
+3. Navigate to the 'Text-to-Speech' section.
+4. Enter your script and select the desired voice model.
+5. Generate and download the audio file.
+
+Once the audio file is downloaded, proceed with the lip-syncing process.
+
+
+### Running Lip Sync
+Use the following command to generate a lip-synced video:
+
 ### Running Lip Sync
 
 Use the following command to generate a lip-synced video:
@@ -63,6 +81,11 @@ python inference.py --driven_audio examples/audio/sample.wav \
 
 The generated video will be saved in the `output` directory.
 
+## Troubleshooting
+
+- **CUDA out of memory**: Reduce the batch size or use a lower-resolution image.
+- **Audio not in sync**: Ensure the audio file is properly formatted and sampled at 16kHz.
+
 ## References
 
 - SadTalker GitHub: [https://github.com/OpenTalker/SadTalker](https://github.com/OpenTalker/SadTalker)
@@ -71,4 +94,5 @@ The generated video will be saved in the `output` directory.
 ## License
 
 This project follows the license terms specified in the SadTalker repository.
+
 
